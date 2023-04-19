@@ -8,12 +8,14 @@
 # Ввод: 3 2 3 7 5
 # Ввод: 3
 
-n=input("Введите кольчество чисел в массиве: ")
-x= input("Введите искомый элемент")
-A = [randint(-10,) for i in range(20)]
+n=int(input("Введите кольчество чисел в массиве: "))
+x= int(input("Введите искомый элемент: "))
+from random import randint
+A = [randint(0,n) for i in range(n)]
+print(A)
 count=0
 for i in range(n):
      if A[i] == x:
             count += 1
 
-print(f'Число {X} встречается в массиве A {count} раз')
+print(f'Число {x} встречается в массиве A {count} раз')
