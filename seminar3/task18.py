@@ -10,16 +10,11 @@
 #     1 2 3 4 5
 #     6
 #     -> 5
-n=int(input("Введите кольчество чисел в массиве: "))
-x= int(input("Введите искомый элемент: "))
+n=abs(int(input("Введите кольчество чисел в массиве: ")))
 from random import randint
 A = [randint(1,n) for i in range(n)]
+x= int(input("Введите искомый элемент: "))
 print(A)
-element=0
-min=x-A[0]
-for i in range(1,n):
-     count=x-A[i]
-     if count<min:
-            element = i
 
-print(f'Число {A[element]}  в массиве A наиболее близко к числу{x} ')
+m = min(A, key=lambda b: abs(b-x))
+print(m)
